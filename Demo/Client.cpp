@@ -166,6 +166,11 @@ int main(void)
 			// fine to block on Gets or anything we want
 			// Because the network engine was painstakingly written using threads.
 			Gets(message,sizeof(message));
+			if (strcmp(message, "quit")==0)
+			{
+				puts("Quitting.");
+				break;
+			}
 			char message2[2048];
 
 			mavlink_msg_heartbeat_pack(1, 200, &msg, MAV_TYPE_HELICOPTER, MAV_AUTOPILOT_GENERIC, MAV_MODE_GUIDED_ARMED, 0, MAV_STATE_ACTIVE);
