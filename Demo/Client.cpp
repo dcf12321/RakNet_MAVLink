@@ -101,6 +101,7 @@ int main(void)
 	strcpy(clientPort, "4001");
 
 	puts("The IP to connect to is: 127.0.0.1");
+	// strcpy(ip, "127.0.0.1");
 	strcpy(ip, "127.0.0.1");
 	// strcpy(ip, "natpunch.jenkinssoftware.com");
 	
